@@ -4,7 +4,7 @@ import { FilmsInterface } from '..'
 
 
 
-const Component = ({film} : any) => {
+const Component = ({...film} : FilmsInterface) => {
 
 const { name, link} = film
 

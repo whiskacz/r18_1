@@ -31,7 +31,7 @@ const App = () => {
         <DivContainer>
            {films.map((film : FilmsInterface) =>{
            return (
-            <Component key={film.name} film={film} />
+            <Component key={film.name} {...film} />
            )})} 
         </DivContainer>
     )
