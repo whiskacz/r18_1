@@ -1,10 +1,13 @@
 import React from 'react'
+import { FilmsInterface } from '..'
 
 
 
 
+const Component = ({film} : any) => {
 
-function Component({film}) {
+const { name, link} = film
+
   return (
     <div style={{
       display:"flex",
@@ -17,12 +20,15 @@ function Component({film}) {
       alignItems:"center"
     }}>
       <p 
-      key={film.id}
       style={{
         maxHeight:"80%"
       }}
-      >{film.name}</p>
-      <img src={film.link} alt="filmPhoto" />
+      >{name}</p>
+      <img src={link} alt="filmPhoto" 
+      style={{
+        height:"80%",
+        width:"80%"
+      }}/>
     </div>
   )
 }
